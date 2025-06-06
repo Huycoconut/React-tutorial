@@ -1,8 +1,11 @@
 export default function TabButoon({children}) {
+    //
+    function handleClick(){
+        alert("Nut Bam Duoc Click");
+    }
   return (
     <li>
-      <button>{children}</button>
+      <button onClick={handleClick}>{children}</button>
     </li>
   );
 }
-    
