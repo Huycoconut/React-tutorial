@@ -7,8 +7,8 @@ import MainContent from "./component/MainContent/MainContent.jsx";
 
 function App() {
   //
-  function handleClick() {
-    alert("Nut Bam Duoc Click");
+  function handleClick(selectButton) {
+    alert(`Nut Bam ${selectButton} Duoc Click`);
   }
   return (
     <>
@@ -24,10 +24,10 @@ function App() {
         </ul>
 
         <div className="tab-buttons">
-          <TabButton onSelect={handleClick}>React</TabButton>
-          <TabButton onSelect={handleClick}>Flutter</TabButton>
-          <TabButton onSelect={handleClick}>Node JS</TabButton>
-          <TabButton onSelect={handleClick}>Angular</TabButton>
+          <TabButton onSelect={()=>{handleClick('React')}}>React</TabButton>
+          <TabButton onSelect={()=>{handleClick('Flutter')}}>Flutter</TabButton>
+          <TabButton onSelect={()=>{handleClick('Node JS')}}>Node JS</TabButton>
+          <TabButton onSelect={()=>{handleClick('Andgular')}}>Angular</TabButton>
         </div>
       </div>
     </>
