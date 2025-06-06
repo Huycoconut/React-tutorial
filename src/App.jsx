@@ -1,6 +1,7 @@
 import "./App.css";
 
 import { data } from "../src/data";
+import TabButton from "./component/TabButton.jsx"
 import Header from "./component/Header/Header.jsx";
 import MainContent from "./component/MainContent/MainContent.jsx";
 
@@ -10,17 +11,22 @@ function App() {
       <DynamicValue />
       <Header />
       //cach 1
-      <ul>
-        <MainContent
-          image={data[0].image}
-          desc={data[0].desc}
-          title={data[0].title}
-        />
-        //cach 2
-        <MainContent {...data[1]} />
-        <MainContent {...data[1]} />
-        <MainContent {...data[1]} />
-      </ul>
+      <div className="main-tab-wrapper">
+  <ul className="main-list">
+    <MainContent {...data[0]} />
+    <MainContent {...data[1]} />
+    <MainContent {...data[2]} />
+    <MainContent {...data[3]} />
+  </ul>
+
+  <div className="tab-buttons">
+    <TabButton>React</TabButton>
+    <TabButton>Flutter</TabButton>
+    <TabButton>Node JS</TabButton>
+    <TabButton>Angular</TabButton>
+  </div>
+</div>
+
     </>
   );
 }

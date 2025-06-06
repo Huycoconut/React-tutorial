@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import './MainContent.css';
 
 function MainContent({ image, title, desc }) {
   return (

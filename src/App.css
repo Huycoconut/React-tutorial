@@ -5,8 +5,41 @@
   text-align: center;
 }
 
-.imageDemo {
-  width: 700px;
-  height: 600px;
+.main-tab-wrapper {
+  display: flex;
+  flex-direction: row; /* nằm ngang */
+  align-items: flex-start;
+  gap: 32px;
+  justify-content: center;
+  flex-wrap: wrap; /* giúp responsive */
 }
 
+.main-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-buttons {
+  
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+button {
+  padding: 12px 20px;
+  font-size: 1rem;
+  background-color: #5865f2;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #4752c4;
+}
